@@ -29,15 +29,20 @@
 // });
 // ReactDOM.createRoot(document.getElementById("root")).render(frag);
 
-const parent = React.createElement("div", { className: "parent" }, [
-  React.createElement("div", { className: "child" }, [
-    React.createElement("h1", {}, "This is the Tag 1"),
-    React.createElement("h2", {}, "This is the Tag 1"),
-  ]),
-  React.createElement("div", { className: "child" }, [
-    React.createElement("h1", {}, "This is the Tag 1"),
-    React.createElement("h2", {}, "This is the Tag 1"),
-  ]),
-]);
+// const parent = React.createElement("div", { className: "parent" }, [
+//   React.createElement("div", { className: "child" }, [
+//     React.createElement("h1", {}, "This is the Tag 1"),
+//     React.createElement("h2", {}, "This is the Tag 1"),
+//   ]),
+//   React.createElement("div", { className: "child" }, [
+//     React.createElement("h1", {}, "This is the Tag 1"),
+//     React.createElement("h2", {}, "This is the Tag 1"),
+//   ]),
+// ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(parent);
+// ReactDOM.createRoot(document.getElementById("root")).render(parent);
+
+const heading = document.createElement("h1");
+heading.innerHTML = "Hello";
+const root = document.getElementById("root");
+root.appendChild(heading);
