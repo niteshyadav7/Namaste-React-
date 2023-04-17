@@ -1,0 +1,18 @@
+{
+  "name": "inception",
+  "version": "1.0.0",
+  "description": "This is the Namaste React",
+  
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Nitesh",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

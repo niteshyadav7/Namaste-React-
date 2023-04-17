@@ -42,7 +42,10 @@
 
 // ReactDOM.createRoot(document.getElementById("root")).render(parent);
 
+import React from "react";
+import ReactDOM from "react-dom/client"
+
 const heading = document.createElement("h1");
-heading.innerHTML = "Hello";
+heading.innerHTML = "Hello React ";
 const root = document.getElementById("root");
 root.appendChild(heading);
