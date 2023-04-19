@@ -1839,19 +1839,23 @@ const dataObj = [
 ];
 
 const RestCard = ({ res }) => {
+  const { name, cuisines, avgRating, costForTwoString, deliveryTime } = res?.data;
   return (
     <div className="res-container">
       <div className="res-card">
         <img
-          src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+res.data.cloudinaryImageId}
+          src={
+            "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
+            res.data.cloudinaryImageId
+          }
           alt="images"
           width={200}
         />
-        <h3>{res.data.name}</h3>
-        <h4>{res.data.cuisines.join(", ")}</h4>
-        <h4>{res.data.avg} stars</h4>
-        <h4> {res.data.costForTwoString}</h4>
-        <h4>{res.data.deliveryTime} minutes</h4>
+        <h3>{name}</h3>
+        <h4>{cuisines.join(", ")}</h4>
+        <h4>{avgRating} stars</h4>
+        <h4> {costForTwoString}</h4>
+        <h4>{deliveryTime} minutes</h4>
       </div>
     </div>
   );
@@ -1862,18 +1866,8 @@ const Body = () => {
     <div>
       <div>SearchBar</div>
       <div className="card">
-        <RestCard res={dataObj[0]} />
-        <RestCard res={dataObj[1]} />
-        <RestCard res={dataObj[2]} />
-        <RestCard res={dataObj[3]} />
-        <RestCard res={dataObj[4]} />
-        <RestCard res={dataObj[5]} />
-        <RestCard res={dataObj[6]} />
-        <RestCard res={dataObj[7]} />
-        <RestCard res={dataObj[8]} />
-        <RestCard res={dataObj[9]} />
-        <RestCard res={dataObj[10]} />
-        <RestCard res={dataObj[11]} />
+        {dataObj.map((restaurant)=>(<RestCard res={restaurant}/>))}
+       
       </div>
     </div>
   );
