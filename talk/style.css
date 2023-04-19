@@ -16,7 +16,8 @@ li{
 .res-card{
     margin: 10px;
     padding: 5px;
-    width: fit-content;
+    height: min-content;
+    width: min-content;
    
 }
 .card{
