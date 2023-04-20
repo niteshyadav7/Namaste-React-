@@ -1866,7 +1866,7 @@ const Body = () => {
     <div>
       <div>SearchBar</div>
       <div className="card">
-        {dataObj.map((restaurant)=>(<RestCard res={restaurant}/>))}
+        {dataObj.map((restaurant,key)=>(<RestCard key={key} res={restaurant}/>))}
        
       </div>
     </div>

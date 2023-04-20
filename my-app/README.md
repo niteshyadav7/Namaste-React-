@@ -1,0 +1,12 @@
+# Food App 
+
+# App Layout
+
+- HEADER
+  -LOGO
+  -NAV ITEMS
+- BODY
+  -SEARCH
+  -RESTAURANT CONTAINER
+  -RESTAURANT CARDS 
+- FOOTER
