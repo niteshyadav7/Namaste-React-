@@ -43,3 +43,16 @@ ul>li{
 .card-logo{
     width: 200px;
 }
+
+.filter-btn{
+    margin: 10px;
+    padding: 20px;
+}
+.search{
+    margin: 20px;
+    width: 25%;
+    /* text-align: center; */
+}
+.search-out{
+    text-align: center;
+}
