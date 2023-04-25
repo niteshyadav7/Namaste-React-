@@ -1,18 +1,31 @@
 import ResContainer from "./ResContainer";
 import { resList } from "../utils/mockData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function filterData(seachInput, restaurants) {
   const filteredData = restaurants.filter((restaurantsItem) =>
     restaurantsItem.data.name.includes(seachInput)
   );
-  console.log(filterData);
+
   return filteredData;
 }
 
 const Body = () => {
-  const [restaurants, setRestaurants] = useState(resList);
+  const [restaurants, setRestaurants] = useState([]);
   const [seachInput, setSearchInput] = useState("");
+
+  useEffect(() => {
+    getRestaurants();
+  }, []);
+
+  async function getRestaurants() {
+    const data = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.375461&lng=79.457907&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    setRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+    console.log(json);
+  }
 
   const onSubmit2 = () => {
     const data = filterData(seachInput, restaurants);
