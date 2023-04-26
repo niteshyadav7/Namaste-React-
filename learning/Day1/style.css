@@ -9,3 +9,7 @@ body{
 #header{
     text-align: center;
 }
+table,tr,td,th,caption{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
